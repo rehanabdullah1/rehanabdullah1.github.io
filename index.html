@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+</script>
+<link rel="stylesheet" href="style.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Rehan Abdullah | Developer</title>
@@ -205,6 +212,11 @@
        <img src="mail.png" width="20" height="20" alt="">
        Mail To Me
     </a>
+    <button id="theme-toggle" aria-label="Toggle dark mode">
+    Switch Theme
+</button>
+
+<script src="script.js"></script>
   </footer>
 
 </body>
