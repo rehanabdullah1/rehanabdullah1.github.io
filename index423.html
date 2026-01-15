@@ -1,1 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Rehan Abdullah 1 | Developer</title>
+  <link rel="icon" type="image/x-icon" href="favi.gif">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet"> 
+  <!-- 2026 Icon Standard -->
+  <script src="unpkg.com"></script>
+
+  <style>
+    :root {
+      --bg: #030303;
+      --card-bg: rgba(255, 255, 255, 0.04);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --text: #f4f4f5;
+      --muted: #a1a1aa;
+      --accent: #3b82f6;
+      --accent-glow: rgba(59, 130, 246, 0.2);
+    }
+
+    * { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* High-Performance 2026 Mesh Gradient */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: 
+        radial-gradient(at 0% 0%, hsla(217,100%,10%,1) 0, transparent 45%), 
+        radial-gradient(at 100% 100%, hsla(217,100%,5%,1) 0, transparent 45%);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 80px 24px;
+      flex: 1;
+      width: 100%;
+    }
+
+    .profile-section {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 14px;
+      background: var(--accent-glow);
+      color: var(--accent);
+      border-radius: 100px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+    }
+
+    header h1 {
+      font-size: clamp(2.5rem, 8vw, 3.5rem);
+      margin: 0;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+      background: linear-gradient(to bottom, #fff 50%, #71717a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin-top: 16px;
+      font-weight: 400;
+    }
+
+    .links-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .project-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      backdrop-filter: blur(12px);
+      transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .project-link:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--accent);
+      transform: translateY(-2px) scale(1.01);
+      box-shadow: 0 15px 30px -10px var(--accent-glow);
+    }
+
+    .project-link i {
+      opacity: 0.4;
+      transition: transform 0.3s ease, opacity 0.3s;
+    }
+
+    .project-link:hover i {
+      transform: translateX(4px);
+      opacity: 1;
+      color: var(--accent);
+    }
+
+    footer {
+      padding: 60px 24px;
+      text-align: center;
+      border-top: 1px solid var(--card-border);
+      background: linear-gradient(to top, rgba(59, 130, 246, 0.03), transparent);
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .hover-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: white;
+      color: black;
+      padding: 12px 24px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: transform 0.2s, filter 0.2s;
+    }
+
+    .hover-btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(0.9);
+    }
+
+    .hover-btn.secondary {
+      background: var(--card-bg);
+      color: white;
+      border: 1px solid var(--card-border);
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="profile-section">
+      <span class="badge">Vlad Lend • RA1</span>
+      <header>
+        <h1>Rehan Abdullah 1</h1>
+        <p>Building digital experiences & interactive games.</p>
+      </header>
+    </div>
+
+    <main class="links-grid">
+      <a class="project-link" href="https://rehanabdullah1.github.io/recaptcha" target="_blank">
+        <span>Recaptchas</span>
+        <i data-lucide="arrow-up-right" size="20"></i>
+      </a>
+      <a class="project-link" href="https://rehanabdullah1.github.io/AlarmPanel" target="_blank">
+        <span>Alarm Panel</span>
+        <i data-lucide="arrow-up-right" size="20"></i>
+      </a>
+      <a class="project-link" href="https://rehanabdullah1.github.io/FlappyBird" target="_blank">
+        <span>Flappy Bird</span>
+        <i data-lucide="arrow-up-right" size="20"></i>
+      </a>
+      <a class="project-link" href="https://rehanabdullah1.github.io/CrashOnStart" target="_blank">
+        <span>Crash On Start!</span>
+        <i data-lucide="arrow-up-right" size="20"></i>
+      </a>
+      <a class="project-link" href="https://rehanabdullah1.github.io/Time4Fun" target="_blank">
+        <span>T4F Upper</span>
+        <i data-lucide="arrow-up-right" size="20"></i>
+      </a>
+    </main>
+  </div>
+
+  <footer>
+    <div style="color: var(--muted); font-size: 0.8rem; font-weight: 600; letter-spacing: 1px;">CONNECT</div>
+    <div class="btn-group">
+        <a href="https://github.com/rehanabdullah1" class="hover-btn" target="_blank">
+           <i data-lucide="github" size="18"></i>
+           GitHub
+        </a>
+        <a href="mailto:hest716800800@gmail.com" class="hover-btn secondary">
+           <i data-lucide="mail" size="18"></i>
+           Email Me
+        </a>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize modern icons
+    lucide.createIcons();
+  </script>
+</body>
+</html>
 
