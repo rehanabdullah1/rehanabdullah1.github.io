@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>‎ </title>
+    <style>
+        /* Modern BSOD Styling */
+        body {
+            background-color: #0078d7; /* Windows 10 Blue */
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: none; /* Hide mouse for realism */
+            overflow: hidden;
+            user-select: none;
+        }
+
+        .container {
+            max-width: 900px;
+            padding: 50px;
+        }
+
+        .sad-face {
+            font-size: 150px;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 30px;
+            line-height: 1.4;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .percentage {
+            font-size: 30px;
+            margin-bottom: 50px;
+        }
+
+        .footer {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .qr-code {
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            padding: 5px;
+        }
+
+        .footer-text {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body onclick="">
+    <div class="container">
+        <div class="sad-face">:(</div>
+        <div class="message">
+            Your PC ran into a problem and needs to restart. We're just collecting some error info, and then we'll restart for you.
+        </div>
+        <div class="percentage">
+            <span id="progress">0</span>% complete
+        </div>
+        
+        <div class="footer">
+            <!-- Placeholder for QR Code -->
+            <div class="qr-code">
+              
+            </div>
+            <div class="footer-text">
+                For more information about this issue and possible fixes, visit https://www.windows.com/stopcode<br><br>
+                If you call a support person, give them this info:<br>
+                Stop code: CRITICAL_PROCESS_DIED
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simulate progress increasing
+        let count = 0;
+        const progressElement = document.getElementById('progress');
+        
+        function updateProgress() {
+            if (count < 100) {
+                count += Math.floor(Math.random() * 5) + 1;
+                if (count > 100) count = 100;
+                progressElement.innerText = count;
+                setTimeout(updateProgress, Math.random() * 2000 + 500);
+            }
+        }
+        
+        // Function to trigger Fullscreen on click
+        function requestFullscreen() {
+            const elem = document.documentElement;
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            }
+        }
+
+        // Start the fake counter
+        updateProgress();
+    </script>
+</body>
+</html>
