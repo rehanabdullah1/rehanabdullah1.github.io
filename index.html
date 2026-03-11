@@ -194,10 +194,17 @@
     </main>
   </div>
  <h2>This Website Visits</h2>
- <script>
-    // Appends the count to the <body>; you can use a CSS selector instead
-    window.goatcounter.visit_count({append: 'body'})
+<script>
+    var t = setInterval(function() {
+        if (window.goatcounter && window.goatcounter.visit_count) {
+            clearInterval(t);
+            window.goatcounter.visit_count({
+                append: 'body' // Change 'body' to a specific #id if needed
+            });
+        }
+    }, 100);
 </script>
+
 
   <script data-goatcounter="https://rehanabdullah1.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
